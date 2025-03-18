@@ -1,13 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>actividad</ion-title>
+    <ion-title>Actividad</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">actividad</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+<ion-content>
+  
+  <ion-segment [(ngModel)]="selectedFilter" color="primary" mode="ios">
+    <ion-segment-button value="todo">Todo</ion-segment-button>
+    <ion-segment-button value="solicitudes">Solicitudes</ion-segment-button>
+    <ion-segment-button value="respuestas">Respuestas</ion-segment-button>
+    <ion-segment-button value="menciones">Menciones</ion-segment-button>
+    <ion-segment-button value="citas">Citas</ion-segment-button>
+    <ion-segment-button value="repost">Repost</ion-segment-button>
+  </ion-segment>
